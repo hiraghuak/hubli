@@ -27,7 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     'hubli-env.xirmetn3bq.us-west-2.elasticbeanstalk.com',
-    '127.0.0.1']
+    '127.0.0.1'
+    ]
 
 
 # Application definition
@@ -39,8 +40,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
+    
+    'core',
     'rest_framework',
+    
 ]
 
 MIDDLEWARE = [
@@ -123,3 +126,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = 'static'
+
+
+AUTH_USER_MODEL = 'core.User'
